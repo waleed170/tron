@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tron Lightcycle Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Tron Lightcycle Game</h1>
+        <div class="scoreboard">
+            <div class="player1-score">Player 1: <span id="p1-score">0</span></div>
+            <div class="player2-score">Player 2: <span id="p2-score">0</span></div>
+        </div>
+        <canvas id="gameCanvas" width="600" height="400"></canvas>
+        <div class="controls">
+            <p>Player 1: WASD | Player 2: Arrow Keys</p>
+            <button id="startBtn">Start Game</button>
+            <button id="resetBtn">Reset</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

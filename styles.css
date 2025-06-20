@@ -1,0 +1,121 @@
+/* Modern Neon Tron Styling */
+body {
+    font-family: 'Orbitron', sans-serif;
+    background-color: #0a0a1a;
+    color: #00ffcc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.game-container {
+    text-align: center;
+    background-color: rgba(10, 10, 30, 0.8);
+    padding: 2rem;
+    border-radius: 10px;
+    border: 2px solid #00ffcc;
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.3);
+}
+
+h1 {
+    margin: 0 0 1rem;
+    font-size: 2.5rem;
+    text-shadow: 0 0 10px #00ffcc;
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.player1-score {
+    color: #ff3366;
+    text-shadow: 0 0 5px #ff3366;
+}
+
+.player2-score {
+    color: #3366ff;
+    text-shadow: 0 0 5px #3366ff;
+}
+
+#gameCanvas {
+    background-color: #111122;
+    border: 2px solid #00ffcc;
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.2);
+    display: block;
+    margin: 0 auto;
+}
+
+.controls {
+    margin-top: 1rem;
+}
+
+button {
+    background-color: #00ffcc;
+    color: #0a0a1a;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    margin: 0.5rem;
+    border-radius: 5px;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
+}
+
+button:hover {
+    background-color: #00e6b8;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Game Over Overlay */
+.game-over {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 2rem;
+    border-radius: 10px;
+    border: 2px solid #ff3366;
+    text-align: center;
+    display: none;
+    z-index: 10;
+    box-shadow: 0 0 20px rgba(255, 51, 102, 0.5);
+}
+
+.game-over h2 {
+    color: #ff3366;
+    margin-top: 0;
+    font-size: 2rem;
+}
+
+.game-over p {
+    color: #00ffcc;
+    font-size: 1.2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .game-container {
+        width: 90%;
+        padding: 1rem;
+    }
+    h1 {
+        font-size: 1.8rem;
+    }
+    #gameCanvas {
+        width: 100%;
+        height: auto;
+    }
+}
