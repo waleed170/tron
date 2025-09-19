@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tron Lightcycle Game</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="game-container">
@@ -16,6 +17,13 @@
         <canvas id="gameCanvas" width="600" height="400"></canvas>
         <div class="controls">
             <p>Player 1: WASD | Player 2: Arrow Keys</p>
+            <div class="game-mode">
+                <label class="switch">
+                    <input type="checkbox" id="computerMode">
+                    <span class="slider"></span>
+                </label>
+                <span>Computer Opponent</span>
+            </div>
             <button id="startBtn">Start Game</button>
             <button id="resetBtn">Reset</button>
         </div>
