@@ -78,31 +78,59 @@ button:active {
     transform: scale(0.98);
 }
 
-/* Game Over Overlay */
-.game-over {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.9);
-    padding: 2rem;
-    border-radius: 10px;
-    border: 2px solid #ff3366;
-    text-align: center;
-    display: none;
-    z-index: 10;
-    box-shadow: 0 0 20px rgba(255, 51, 102, 0.5);
-}
-
-.game-over h2 {
-    color: #ff3366;
-    margin-top: 0;
-    font-size: 2rem;
-}
-
-.game-over p {
+/* Game Mode Toggle */
+.game-mode {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0;
     color: #00ffcc;
-    font-size: 1.2rem;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin-right: 10px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: red;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: green;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
 }
 
 /* Responsive Design */
